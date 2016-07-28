@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Joshua Vaughn"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel = "stylesheet" type="text/css" href="assets/css/reset.css"> 
+    <link rel = "stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <title>Contact</title>
+</head>
+
+<body>
+  
+  <header id = "head"> <h1>Joshua Vaughn</h1>
+    <nav>
+        <a href="index.html">About </a>
+        <a href="portfolio.html">Portfolio </a>
+        <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+
+   
+   <div class="content-container"><section class = "content">
+           <h1>Contact</h1>
+        
+       <form  name="form1" id="form1" action="formmail.php" method="POST">
+       <label for="name"> Name</label><br>
+       <input id="name" name="name" type="text" required id="name" form="form1" size="80"><br><br>  
+       <label for="email"> Email</label> <br>
+       <input id="email" name="email" type="email" required id="email" form="form1" size="73"><br>
+       <label for ="textarea"><br>Message</label><br> 
+       <textarea id="message" type="textarea"name="message" cols="72" rows="10"required id="message"></textarea><br>
+       <input id="submit" type="submit" name="submit" id="submit" value="Submit">
+       </form>
+         
+       
+           
+       </section>
+       
+       <aside class = "social"> 
+           <h2>Connect with Me</h2>
+       
+              <div class = "contactLinks">
+            
+                <a href= "https://github.com/010josh010">
+                 <img src="/assets/images/github.png" alt="github"></a>
+                <a href="https://www.linkedin.com/in/joshua-vaughn-9553bb116">
+                 <img src = "assets/images/linkedin.png" alt = "linkedin"></a>
+                <a href="http://stackoverflow.com/users/6585987/010josh010">
+                 <img src="assets/images/stackoverflow.png" alt = "stackoverflow"></a>
+            
+        </div>
+       
+           </aside>
+       </div>
+    
+   
+   
+<footer> Copyright 2016 Joshua Vaughn</footer>
+
+    
+        
+            
+<script>
+    var submit = document.getElementById("submit"); 
+    var name = document.getElementById("name");
+    var email= document.getElementById("email");
+    var message= document.getElementById("message"); 
+    submit.onclick = function(){
+       for(i=0;i <=email.value.length; i++){
+                if(email.value[i] === "@" && name.value !== "" && message.value !== ""){
+                    alert("Thank you for your message!"); 
+                }
+            };
+        
+    }
+    </script>    
+</body>
+
+</html>
